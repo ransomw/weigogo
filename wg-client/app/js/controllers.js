@@ -28,6 +28,7 @@ define(['angular',
 		function TripsCtrl($scope, Trip) {
       console.log("trips ctrl");
       console.log(Trip);
+      $scope.trips = Trip.all();
 		}]);
 
 
