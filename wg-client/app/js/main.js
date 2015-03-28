@@ -21,15 +21,17 @@ window.name = "NG_DEFER_BOOTSTRAP!";
 require( [
 	'angular',
 	'angularRoute',
-	'controllers'
+	'controllers',
+  'services'
 ], function(angular) {
 
 	var APP_NAME = 'weigogo';
 
   		angular.element(document).ready(function() {
 				var interestsApp = angular.module(APP_NAME, [
-						'ngRoute',
-						APP_NAME+'.controllers'
+					'ngRoute',
+					APP_NAME+'.controllers',
+          APP_NAME+'.services'
 				]);
 
 				interestsApp.config(

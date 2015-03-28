@@ -1,4 +1,5 @@
-define(['angular'
+define(['angular',
+        'services'
 ], function (angular) {
   // todo put into constants module
   var APP_NAME = 'weigogo';
@@ -23,9 +24,10 @@ define(['angular'
 
 
   myAppControllers.controller('TripsCtrl', [
-		'$scope',
-		function TripsCtrl($scope) {
+		'$scope', 'Trip',
+		function TripsCtrl($scope, Trip) {
       console.log("trips ctrl");
+      console.log(Trip);
 		}]);
 
 
