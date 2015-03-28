@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+
+<html lang="en" ng-app="weigogo">
+
+  <head>
+	  <title>WeIgogo</title>
+	  <meta charset="utf-8">
+	  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  </head>
+
+  <body>
+		<nav id="main-menu" class="nav-collapse collapse">
+			<h2 class="hide">Main Navigation</h2>
+			<ul class="nav" ng-controller="HeaderCtrl">
+				<li><a href="#">How it Works</a></li>
+				<li ng-class="{ active: isActive('/home')}">
+          <a href="#/home">Home</a>
+        </li>
+				<li ng-class="{ active: isActive('/trips')}">
+          <a href="#/trips">Current Trips</a>
+        </li>
+				<li><a href="#">Travel Stories</a></li>
+				<li><a href="#">The App</a></li>
+				<li><a href="#">Sign In</a></li>
+			</ul>
+			<a href="#" class="btn btn-default customPink pull-right large" id="navSignUp">Sign Up</a>
+
+		</nav>
+
+    <hr/>
+
+		<div ng-view></div>
+
+		<script data-main="app/js/main"
+						src="bower_components/requirejs/require.js"></script>
+
+</div>
+</body>
