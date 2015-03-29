@@ -22,9 +22,12 @@
         </li>
 				<li><a href="#">Travel Stories</a></li>
 				<li><a href="#">The App</a></li>
-				<li><a href="#">Sign In</a></li>
+				<li ng-hide="signedIn"><a href="#/signin">Sign In</a></li>
+        <li ng-show="signedIn"><a ng-click="signOut()">Sign Out</a></li>
 			</ul>
-			<a href="#" class="btn btn-default customPink pull-right large" id="navSignUp">Sign Up</a>
+			<a href="#/signup">
+        Sign Up
+      </a>
 
 		</nav>
 

@@ -1,5 +1,9 @@
 <h3>trips</h3>
 
 <ul>
-  <li ng-repeat="trip in trips">{{trip}}</li>
+  <li ng-repeat="trip in trips">
+    <a href="#/trip/{{trip.id}}">
+      {{trip.depart}} to {{trip.arrive}} on {{trip.date}}
+    </a>
+  </li>
 </ul>

@@ -1,0 +1,7 @@
+<form name="signinForm">
+  username: <input type="text" ng-model="user.name"/> <br/>
+  password: <input type="password" ng-model="user.pass"/> <br/>
+  <button ng-click="add(user)">sign up</button>
+</form>
+
+<span ng-show="nameExists">username already exists</span>
